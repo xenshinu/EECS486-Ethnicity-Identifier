@@ -1,0 +1,28 @@
+# Local environment for nuclei / cell counting on fluorescence images.
+# Tested with Python 3.10 / 3.11 on macOS, Linux and Windows.
+#
+#   python -m venv .venv
+#   source .venv/bin/activate          # Windows: .venv\Scripts\activate
+#   pip install -r requirements-nuclei.txt
+#
+# If you have a CUDA GPU, install torch via the official selector first
+# (https://pytorch.org/get-started/locally/) to get the matching CUDA wheel,
+# then run the line above.
+
+# core
+numpy<2.0
+scipy>=1.10
+scikit-image>=0.22
+pillow>=10
+matplotlib>=3.7
+tifffile>=2024.1
+
+# deep-learning frameworks
+torch>=2.1
+tensorflow==2.16.*
+
+# segmentation models
+stardist>=0.9
+csbdeep>=0.7
+cellpose>=4.0
+instanseg-torch>=0.1
